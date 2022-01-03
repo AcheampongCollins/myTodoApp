@@ -1,10 +1,18 @@
 import Header from "../component/Header";
 import TodoForms from "../component/forms";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import TodoItem from "../component/TodoItem";
 const Body = () => {
   const [inputText, setInputText] = useState("");
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState(() => {
+    const saveData = localStorage.getItem("todos");
+    const initialData = JSON.parse(saveData);
+    return initialData || [];
+  });
+
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
