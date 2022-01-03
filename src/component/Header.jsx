@@ -1,7 +1,7 @@
 const Header = () => {
   return (
-    <div className="text-center sm:text-xl text-4xl mb-8 text-purple-700">
-      MY NEW TODO APP
+    <div className="text-center text-2xl font-bold mb-4 md:mb-8 md:text-4xl  text-purple-700">
+      TODO APP
     </div>
   );
 };

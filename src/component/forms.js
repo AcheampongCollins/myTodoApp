@@ -1,6 +1,6 @@
 const TodoForms = ({ setInputText, inputText, handleSubmit }) => {
   return (
-    <form className="text-center mb-6" onSubmit={handleSubmit}>
+    <form className="sm:w-full mb-6" onSubmit={handleSubmit}>
       <input
         type="text"
         placeholder="Enter your Todo"
@@ -11,10 +11,10 @@ const TodoForms = ({ setInputText, inputText, handleSubmit }) => {
         }}
       />
       <button
-        className="outline-none p-3 rounded-lg shadow-sm ml-2 border-2 border-gray-300  focus:outline-none
+        className="w-16 outline-none p-3 rounded-lg shadow-sm ml-1 border-2 border-gray-300  focus:outline-none
             hover:bg-indigo-900 hover:text-white transition duration-300 ease-linear"
       >
-        Add Task
+        Add
       </button>
     </form>
   );

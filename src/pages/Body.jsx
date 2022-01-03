@@ -50,7 +50,7 @@ const Body = () => {
   };
 
   return (
-    <div className="w-full bg-white p-16 rounded shadow-2xl md:w-1/3 lg:w-1/2">
+    <div className="w-auto h-screen sm:h-auto bg-white p-16 rounded shadow-2xl md:w-1/3 lg:w-1/2">
       <Header />
       <TodoForms
         setInputText={setInputText}
